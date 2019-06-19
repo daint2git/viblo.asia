@@ -1,0 +1,49 @@
+
+version: '3.3'
+services:
+  client:
+    build:
+      context: ./client
+    container_name: app-client
+    volumes:
+      - ./client/src:/usr/app/src
+    ports:
+      - 6969:6969
+    networks:
+      - frontend_network
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  server:
+    build:
+      context: ./server
+    container_name: app-server
+    volumes:
+      - ./server/src:/usr/app/src
+    ports:
+      - 9696:9696
+    depends_on:
+      - db
+    networks:
+      - frontend_network
+      - backend_network
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - DATABASE_CONNECTION_STRING=postgresql://postgres:password@db:5432/management-app
+  db:
+    image: postgres:9.6
+    container_name: app-db
+    volumes:
+      - db-data:/var/lib/postgresql
+    ports:
+      - 15432:5432
+    networks:
+      - backend_network
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=management-app
+volumes:
+  db-data:
+networks:
+  frontend_network:
+  backend_network:
