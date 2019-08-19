@@ -1,9 +1,11 @@
 # start all container
+
 ```sh
 docker-compose up
 ```
 
 # database
+
 ```sh
 cd database
 ./script.sh create-db

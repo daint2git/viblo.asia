@@ -1,0 +1,16 @@
+.wrapper {
+  width: 200px;
+  background-color: red;
+  color: white;
+}
+
+.content {
+  width: 100px;
+  font-size: 20px;
+  background-color: blue;
+  color: inherit;
+}
+
+.content:hover {
+  background-color: green;
+}
