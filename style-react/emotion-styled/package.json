@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.14",
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
     "facepaint": "^1.2.1",
@@ -17,6 +16,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-emotion": "^10.0.16",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"

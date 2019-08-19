@@ -1,9 +1,11 @@
 {
   "presets": [
     ["@babel/env", { "modules": false, "loose": true }],
-    ["@babel/react", { "development": true }],
+    ["@babel/react", { "development": true }]
+  ],
+  "plugins": [
     [
-      "@emotion/babel-preset-css-prop",
+      "emotion",
       {
         "sourceMap": true,
         "autoLabel": true,

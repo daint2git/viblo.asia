@@ -6,7 +6,7 @@ import styles from './app.css'
 const cx = classNames.bind(styles)
 
 const Example = props => (
-  <div className={cx('wrapper', { centering: true })}>
+  <div className={cx('wrapper')}>
     <p className={cx('content')} {...props} />
   </div>
 )

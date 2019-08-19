@@ -4,12 +4,6 @@
   color: white;
 }
 
-.centering {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .content {
   width: 100px;
   font-size: 20px;
