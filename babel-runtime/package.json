@@ -1,0 +1,27 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "daint2",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "scripts": {
+    "build": "yarn build:runtime && yarn build:runtime-corejs2 && yarn build:runtime-corejs3",
+    "build:runtime": "babel --config-file ./.with-babel-runtime.js --out-file output-with-babel-runtime.js  input.js",
+    "build:runtime-corejs2": "babel --config-file ./.with-babel-runtime-corejs2.js --out-file output-with-babel-runtime-corejs2.js input.js",
+    "build:runtime-corejs3": "babel --config-file ./.with-babel-runtime-corejs3.js --out-file output-with-babel-runtime-corejs3.js input.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.0",
+    "@babel/runtime-corejs2": "^7.6.0",
+    "@babel/runtime-corejs3": "^7.6.0",
+    "react": "^16.9.0"
+  }
+}
