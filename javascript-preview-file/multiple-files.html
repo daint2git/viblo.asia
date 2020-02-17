@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Multiple Files</title>
+  </head>
+
+  <body>
+    <input type="file" multiple onchange="previewFiles1(this);" />
+    <div id="preview"></div>
+    <script>
+      let count = 0
+
+      function previewFiles1(input) {
+        const preview = document.getElementById('preview')
+        const { files } = input
+
+        Array.from(files).forEach(file => {
+          const reader = new FileReader()
+
+          reader.onload = e => {
+            const img = document.createElement('img')
+
+            img.src = e.target.result
+            img.width = 200
+            img.height = 200
+            img.alt = `file-${++count}`
+
+            preview.appendChild(img)
+          }
+
+          reader.readAsDataURL(file)
+        })
+      }
+
+      function previewFiles2(input) {
+        const preview = document.getElementById('preview')
+        const { files } = input
+
+        Array.from(files).forEach(file => {
+          const img = document.createElement('img')
+          const objURL = window.URL.createObjectURL(file)
+
+          img.onload = () => window.URL.revokeObjectURL(objURL)
+          img.src = objURL
+          img.width = 200
+          img.height = 200
+          img.alt = `file-${++count}`
+
+          preview.appendChild(img)
+        })
+      }
+    </script>
+  </body>
+</html>
