@@ -1,0 +1,21 @@
+{
+  "name": "babel-preset-env",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "scripts": {
+    "build:default": "babel --config-file ./default/.babelrc --out-file ./default/output.js ./default/input.js",
+    "build:modules": "babel --config-file ./modules/.babelrc --out-file ./modules/output.js ./modules/input.js",
+    "build:target": "babel --config-file ./target/.babelrc --out-file ./target/output.js ./target/input.js",
+    "build:useBuiltIns": "babel --config-file ./useBuiltIns/.babelrc --out-file ./useBuiltIns/output.js ./useBuiltIns/input.js"
+  }
+}
