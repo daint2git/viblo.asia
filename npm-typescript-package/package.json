@@ -1,0 +1,26 @@
+{
+  "name": "daint2-npm-typescript-package",
+  "version": "1.0.1",
+  "description": "Demo npm typescript package",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare" : "npm run build"
+  },
+  "keywords": [],
+  "author": "DaiNT",
+  "license": "ISC",
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com:daint2git/viblo.asia.git",
+    "directory": "npm-typescript-package"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
+}
