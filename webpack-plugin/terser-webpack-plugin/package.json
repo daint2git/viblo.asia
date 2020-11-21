@@ -1,0 +1,11 @@
+{
+  "name": "terser-webpack-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "terser-webpack-plugin": "4.2.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.1"
+  }
+}

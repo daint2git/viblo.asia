@@ -1,0 +1,11 @@
+{
+  "name": "copy-webpack-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^6.3.2",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.1"
+  }
+}

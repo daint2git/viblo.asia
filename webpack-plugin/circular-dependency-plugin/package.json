@@ -1,0 +1,11 @@
+{
+  "name": "circular-dependency-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "circular-dependency-plugin": "^5.2.2",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.1"
+  }
+}
